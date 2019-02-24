@@ -24,6 +24,13 @@ class EmailParser
     #emails.split("," || " ").uniq
     emails.split(/[,\s]+/).uniq 
         # binding.pry
+
+    emails.split(",")
+              binding.pry
+    
+        #.map do |e|
+        #e.split(" ")  
+        #end.to_s
   end
  end
  
@@ -32,9 +39,9 @@ class EmailParser
     # emails.split.map do |each|
     #   each.split(',')
     # end.flatten.uniq
-  
-        #end.to_s
+          #end.to_s
     #end
   #end
 #end
 
+end
