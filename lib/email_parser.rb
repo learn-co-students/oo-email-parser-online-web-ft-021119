@@ -6,10 +6,19 @@
 # or whitespace (' ').
 
 
-class EmailParser
+# emails = "john@doe.com, person@somewhere.org"
+# parser = EmailParser.new(emails)
+ 
+# parser.parse
+# => ["john@doe.com", "person@somewhere.org"]
 
-  def parse(email)
-  binding.pry
+class EmailParser
+  def parse
+    emails.split(",")
+        # binding.pry
+        #.map do |e|
+        #e.split(" ")  
+        #end.to_s
   end
   
 end
