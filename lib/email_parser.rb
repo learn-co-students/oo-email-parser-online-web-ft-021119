@@ -14,10 +14,10 @@
 
 class EmailParser
   def parse
-    emails.split(",")
-        # binding.pry
-        #.map do |e|
-        #e.split(" ")  
+    emails.split.map do |each|
+    each.upcase
+        binding.pry
+  
         #end.to_s
   end
   
