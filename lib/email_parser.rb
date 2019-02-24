@@ -13,12 +13,28 @@
 # => ["john@doe.com", "person@somewhere.org"]
 
 class EmailParser
+  attr_accessor :emails
+
+  def initialize(emails)
+    self.emails = emails 
+  end
+
   def parse
-    emails.split.map do |each|
-    each.upcase
-        binding.pry
+    #emails.split(/, | /).uniq
+    #emails.split("," || " ").uniq
+    emails.split(/[,\s]+/).uniq 
+        # binding.pry
+  end
+ end
+ 
+ 
+ #   end
+    # emails.split.map do |each|
+    #   each.split(',')
+    # end.flatten.uniq
   
         #end.to_s
-  end
-  
-end
+    #end
+  #end
+#end
+
