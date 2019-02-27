@@ -20,11 +20,13 @@ class EmailParser
   def parse
     if @emails.include?(',')
       split_emails = @emails.split /\s*,\s*/
+    elsif
+      split_emails = @emails.split("com")
     else
       split_emails = @emails.split(" ")
     end
     split_emails.uniq
-    # binding.pry
+    binding.pry
   end
   
 end
