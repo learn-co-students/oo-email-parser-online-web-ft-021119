@@ -11,22 +11,50 @@ require 'pry'
 #     parses and removes duplicate emails (FAILED - 4)
 
 class EmailParser
-  
+  attr_accessor :emails
   def initialize(emails)
     @emails = emails
   end
  
- # #split returns an array of elements that we can iterate over 
+# #split returns an array of elements that we can iterate over 
+#   def parse
+#       if @emails.include?(',')
+#         split_emails = @emails.split /\s*,\s*/
+#       elsif (@emails.include?',') && (@emails.include?' ')
+# binding.pry
+#         no_spaces = @emails.split(" ")
+#         no_spaces.map do |email|
+#           if email.include?(',')
+#             email = email.chomp(',')
+#           else
+#             email
+#           end  
+#         end
+#       else
+#         split_emails = @emails.split(" ")
+#       end
+#     # split_emails.uniq
+#     # no_spaces.uniq
+#   end
+  
+  
+  
   def parse
-    if @emails.include?(',')
-      split_emails = @emails.split /\s*,\s*/
-    elsif
-      split_emails = @emails.split("com")
-    else
-      split_emails = @emails.split(" ")
-    end
-    split_emails.uniq
-    binding.pry
+    spaces_only = @emails.gsub(",","")
+    spaces_only.split(" ").uniq
   end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 end
